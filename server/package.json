@@ -1,0 +1,29 @@
+{
+  
+name: novel-writer-app,
+  version: 1.0.0,
+  description: AI-powered
+novel
+writing
+application
+with
+Supabase
+and
+MindsDB,
+  main: app.js,
+  scripts: {
+    start: node
+app.js,
+    dev: nodemon
+app.js
+  },
+  dependencies: {
+    express: ^4.17.1,
+    cors: ^2.8.5,
+    @supabase/supabase-js: ^2.0.0,
+    axios: ^0.27.2
+  },
+  devDependencies: {
+    nodemon: ^2.0.19
+  }
+}

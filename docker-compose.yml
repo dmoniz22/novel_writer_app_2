@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      SUPABASE_URL: ""
+      SUPABASE_ANON_KEY: ""
+      MINDSDB_API_KEY: ""
+    depends_on: []
+
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - server
